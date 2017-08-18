@@ -19,6 +19,6 @@ mean(vars)
 var(sims)
 hist(vars)
 plot(density(vars))
-abline(v = var(sim))
+abline(v = 25)
 
-              
+

@@ -1,0 +1,14 @@
+---
+title: "Simulation of Exponential Distribution"
+author: "Rachit Kinger"
+date: "17 August 2017"
+output: pdf_document
+git_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview  
+This project tests the applicability of the Central Limit Theorem on the exponential distribution in R.   The Cental Limit Theorem states that the distribution of averages of iid variables becomes that of a standard normal as the sample size increases. This is true even if the IID variable itself does not follow a normal distribution. 
