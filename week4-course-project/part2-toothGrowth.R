@@ -5,6 +5,13 @@ library(ggplot2)
 #see summary of dataset
 by(tooth$len, INDICES = list(tooth$dose, tooth$supp), summary)
 
+#what is average tooth length grouped by supp, and dose
+avg <- with(tooth, tapply(len, supp, mean))
+avgSupp <- data.frame(supp = names(avg), val = avg)
+
+avg <- with(tooth, tapply(len, dose, mean))
+avgDose <- data.frame(dose = names(avg), val = avg)
+
 
 #see spread of growth by dosage and compare supp
 g <- ggplot(tooth, aes(as.factor(dose), len))
@@ -15,7 +22,7 @@ t <- ggplot(tooth, aes(dose, len))
 t + geom_point(aes(color = supp)) + facet_grid(as.factor(dose) ~ supp)
 
 #see plot and mean of len by dose and supp
-t + geom_point(aes(color = supp)) + geom_line(data = avg, aes(group = supp, color = supp))
+t + geom_point(aes(color = supp)) + geom_hline(data = avgSupp, aes(yintercept = val, color = supp))
 
 
 #see density of len broken down by dosage and supp
