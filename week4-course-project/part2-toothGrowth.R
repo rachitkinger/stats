@@ -34,6 +34,8 @@ b + geom_density() + facet_grid(as.factor(dose)~supp)
 t.test(len ~ dose, paired = F, var.equal = F, data = subset(tooth, dose != 2))  #mu(dose=0.5) != mu(dose=1.0)
 t.test(len ~ dose, alternative = "less", paired = FALSE, var.equal = FALSE, data = subset(tooth, dose != 2), conf.level = .975)  #mu(dose =0.5) < mu(dose=1.0)
 
+
+
 t.test(len ~ dose, paired = F, var.equal = F, data = subset(tooth, dose != 1)) #mu(dose=0.5) != mu(dose=2.0)
 t.test(len ~ dose, paired = F, var.equal = F, data = subset(tooth, dose != 0.5)) #mu(dose=1) != mu(dose=2)
 

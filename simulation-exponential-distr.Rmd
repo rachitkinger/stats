@@ -15,8 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Overview  
 This project tests the applicability of the Central Limit Theorem on the exponential distribution in R. The Cental Limit Theorem states that the distribution of averages of iid variables becomes that of a standard normal as the sample size increases. This is true even if the IID variable itself does not follow a normal distribution. 
 
-The projects tests the CLT on exponential distribution in R. The properties of the distribution are:  
-
+The projects tests the CLT on exponential distribution in R. The properties of the distribution are: 
 * mean of exp distribution is $1/\lambda$  
 * the standard deviation of the distribution is also $1/\lambda$  
 * probability density function is $\lambda e^{1/z\lambda}$  
